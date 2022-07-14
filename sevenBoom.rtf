@@ -1,0 +1,64 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Medium;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 HelveticaNeue-Bold;
+\f3\fmodern\fcharset0 Courier;\f4\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red18\green21\blue24;\red245\green245\blue245;\red226\green226\blue226;
+\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c8627\c10980\c12549;\cssrgb\c96863\c96863\c96863;\cssrgb\c90980\c90980\c90980;
+\cssrgb\c0\c0\c0\c5098;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa316\partightenfactor0
+
+\f0\fs31\fsmilli15820 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Create a function that takes an array of numbers and return\'a0
+\f1\fs24 \AppleTypeServices \cb4 "Boom!"
+\f0\fs31\fsmilli15820 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0if the digit 7 appears in the array. Otherwise, return\'a0
+\f1\fs24 \AppleTypeServices \cb4 "there is no 7 in the array"
+\f0\fs31\fsmilli15820 \AppleTypeServices\AppleTypeServicesF65539 \cb3 .\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\b\fs30\fsmilli15360 \AppleTypeServices\AppleTypeServicesF65539 \cf2 Examples\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b0\fs28 \AppleTypeServices \cf2 \cb5 sevenBoom([1, 2, 3, 4, 5, 6, 7]) 
+\f1 \uc0\u10142 
+\f3  "Boom!"\
+// 7 contains the number seven.\
+\
+sevenBoom([8, 6, 33, 100]) 
+\f1 \uc0\u10142 
+\f3  "there is no 7 in the array"\
+// None of the items contain 7 within them.\
+\
+sevenBoom([2, 55, 60, 97, 86]) 
+\f1 \uc0\u10142 
+\f3  "Boom!"\
+// 97 contains the number seven.
+\f1 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\b\fs30\fsmilli15360 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 Notes\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b0\fs31\fsmilli15820 \AppleTypeServices\AppleTypeServicesF65539 \cf2 N/A\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f4\fs24 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+Solution:\
+\
+function sevenBoom(arr) \{\
+let splitNum = [];\
+for(let i = 0;i < arr.length;i++)\{\
+		if(arr[i] % 10 === 7)\{\
+      return 'Boom!';\
+		\} else \{\
+			let str = arr[i].toString();\
+      splitNum = str.split('');\
+      if(splitNum.includes('7'))\{\
+        return 'Boom!';\
+      \}\
+    \}\
+	\}\
+	return 'there is no 7 in the array';\
+\}}
