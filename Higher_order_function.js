@@ -26,3 +26,38 @@ console.log(result);
 let bool = x => x ? 'success' : 'failure';
 result = bool(true);
 console.log(result);
+
+//Array as data
+let arr = (x) => x.length;
+result = arr([1,2,3,4]);
+console.log(result);
+
+//Object as data
+let obj = (x) => x.firstName + ' '+ x.secondName;
+result = obj({
+    firstName : 'ram',
+    secondName : 'vin'
+})
+console.log(result);
+
+//function as argument
+isEven = (x) => x % 2;
+result = [1,2,3,4,5,6].filter(isEven);
+console.log(result);
+
+// Greater resulability
+let getName = (x) => x.name;
+let users = [{name:'jj',age:'25'},
+{name:'ram',age:'3'},
+{name:'vin',age:'35'}];
+result = users.map(getName);
+console.log(result);
+
+//Return types
+function arrayValuesTypes(arr) {
+	let result = [];
+	arr.forEach(num => {
+		result.push(typeof num);
+	});
+	return result;
+}
